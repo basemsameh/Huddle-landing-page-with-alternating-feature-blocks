@@ -1,0 +1,279 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Pink: #ff52bf;
+  --Very-Pale-Cyan: #ebfbff;
+  --Very-Dark-Cyan: #00252e;
+  --Grayish-Blue: #808d99;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  background-image: url(images/bg-hero-mobile.svg);
+  background-color: var(--Very-Pale-Cyan);
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 20px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+header nav img,
+footer img {
+  width: 150px;
+}
+
+header nav button.btn {
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 5px 20px;
+  box-shadow: 0 5px 5px rgb(0, 0, 0, 0.1);
+}
+
+header section {
+  text-align: center;
+}
+
+header h1,
+main h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+}
+
+header section button.btn,
+main section#ready button.btn {
+  background-color: var(--Pink);
+  color: #fff;
+  font-size: 14px;
+  border-radius: 15px;
+  font-weight: bold;
+  width: 210px;
+  height: 40px;
+  margin: 20px 0 50px;
+  box-shadow: 0 5px 5px rgb(255, 82, 191, 0.1);
+}
+
+header section img {
+  width: 100%;
+}
+
+/* Main */
+main {
+  padding: 20px;
+}
+
+main section {
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 5px rgb(128, 141, 153, 0.1),
+    0 -3px 3px rgb(128, 141, 153, 0.1);
+}
+
+main section img {
+  width: 100%;
+}
+
+main section div.content {
+  margin-top: 30px;
+}
+
+main section#ready {
+  position: relative;
+  top: 130px;
+  z-index: 2;
+  background-color: #fff;
+  height: 180px;
+}
+
+main section#ready h2 {
+  font-size: 22px;
+}
+
+main section#ready button.btn:hover {
+  opacity: 0.8;
+}
+
+/* Footer */
+footer {
+  background-color: var(--Very-Dark-Cyan);
+  padding: 150px 20px 20px;
+  color: #fff;
+}
+
+footer section:nth-of-type(1) {
+  margin-bottom: 40px;
+}
+
+footer section ul li {
+  margin-top: 20px;
+}
+
+footer section ul li:nth-of-type(1) {
+  list-style-image: url(../images/icon-location.svg);
+  width: 288px;
+}
+
+footer section ul li:nth-of-type(2) {
+  list-style-image: url(../images/icon-phone.svg);
+}
+
+footer section ul li:nth-of-type(3) {
+  list-style-image: url(../images/icon-email.svg);
+}
+
+footer section a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  width: fit-content;
+  margin: 10px 0;
+}
+
+footer section a:hover {
+  text-decoration: underline;
+}
+
+footer section#icons {
+  width: 160px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer section#icons a {
+  border: 1px solid;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  width: 40px;
+  text-decoration: none;
+}
+
+footer section#icons a:hover {
+  color: var(--Pink);
+}
+
+footer p {
+  text-align: center;
+  font-size: 15px;
+  width: 100%;
+}
+
+@media (min-width: 475px) {
+  main section#ready {
+    width: 420px;
+    margin: 0 auto 30px;
+    height: 140px;
+  }
+}
+
+@media (min-width: 800px) {
+  header section,
+  main section,
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  header section div {
+    width: 45%;
+    text-align: left;
+  }
+
+  header section img {
+    width: 45%;
+  }
+
+  main {
+    padding: 40px;
+  }
+
+  main section div.content {
+    width: 45%;
+  }
+
+  main section img {
+    width: 40%;
+  }
+
+  main section:nth-of-type(1) img,
+  main section:nth-of-type(3) img {
+    order: 2;
+  }
+
+  main section:nth-of-type(1) div.content,
+  main section:nth-of-type(3) div.content {
+    order: 1;
+  }
+
+  main section#ready {
+    display: block;
+  }
+
+  footer section {
+    width: 28%;
+    position: relative;
+    bottom: 50px;
+  }
+
+  footer section:nth-of-type(2),
+  footer section:nth-of-type(3) {
+    left: 80px;
+  }
+
+  footer section:nth-of-type(1) {
+    position: static;
+  }
+
+  footer p {
+    text-align: right;
+  }
+}
+
+@media (min-width: 1400px) {
+  header {
+    padding: 20px 50px;
+  }
+
+  header section div {
+    width: 40%;
+  }
+
+  header section img {
+    width: 40%;
+  }
+
+  main {
+    padding: 60px;
+  }
+
+  main section.content {
+    padding: 0 50px;
+  }
+
+  footer {
+    padding: 150px 30px 30px;
+  }
+}
