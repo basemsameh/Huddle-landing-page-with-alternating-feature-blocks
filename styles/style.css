@@ -21,6 +21,8 @@ header {
   background-repeat: no-repeat;
   background-position: center center;
   padding: 20px;
+  margin-bottom: 100px;
+  height: 100vh;
 }
 
 header nav {
@@ -28,21 +30,23 @@ header nav {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 60px;
+  padding-top: 20px;
 }
 
-header nav img,
-footer img {
-  width: 150px;
+header nav img {
+  width: 55%;
+  max-width: 250px;
 }
 
-header nav button.btn {
+header nav .btn {
   font-weight: bold;
   border-radius: 15px;
   padding: 5px 20px;
+  max-width: 200px;
   box-shadow: 0 5px 5px rgb(0, 0, 0, 0.1);
 }
 
-header section {
+header .content-sec {
   text-align: center;
 }
 
@@ -56,20 +60,27 @@ p {
   font-size: 18px;
 }
 
-header section button.btn,
-main section#ready button.btn {
+header .content-sec .content .btn,
+main .ready .btn {
   background-color: var(--Pink);
   color: #fff;
-  font-size: 14px;
-  border-radius: 15px;
+  font-size: 16px;
+  border-radius: 25px;
   font-weight: bold;
-  width: 210px;
-  height: 40px;
+  width: 250px;
+  height: 50px;
   margin: 20px 0 50px;
   box-shadow: 0 5px 5px rgb(255, 82, 191, 0.1);
 }
 
-header section img {
+header .content-sec button:hover,
+main .ready .btn:hover {
+  opacity: 0.8;
+  background-color: var(--Pink);
+  color: #fff;
+}
+
+header .content-sec img {
   width: 100%;
 }
 
@@ -82,7 +93,7 @@ main section {
   border-radius: 15px;
   text-align: center;
   padding: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
   box-shadow: 0 5px 5px rgb(128, 141, 153, 0.1),
     0 -3px 3px rgb(128, 141, 153, 0.1);
 }
@@ -91,24 +102,25 @@ main section img {
   width: 100%;
 }
 
-main section div.content {
+main section .content {
   margin-top: 30px;
 }
 
-main section#ready {
+main .ready {
+  max-width: 1000px;
   position: relative;
-  top: 130px;
+  padding: 30px 0;
+  top: 180px;
   z-index: 2;
   background-color: #fff;
-  height: 180px;
 }
 
-main section#ready h2 {
-  font-size: 22px;
+main .ready .btn {
+  margin: 20px 0 0;
 }
 
-main section#ready button.btn:hover {
-  opacity: 0.8;
+main .ready h2 {
+  font-size: 28px;
 }
 
 /* Footer */
@@ -120,6 +132,10 @@ footer {
 
 footer section:nth-of-type(1) {
   margin-bottom: 40px;
+}
+
+footer section img {
+  width: 200px;
 }
 
 footer section ul li {
@@ -151,7 +167,7 @@ footer section a:hover {
   text-decoration: underline;
 }
 
-footer section#icons {
+footer .icons {
   width: 160px;
   margin: 30px auto;
   display: flex;
@@ -159,7 +175,7 @@ footer section#icons {
   align-items: center;
 }
 
-footer section#icons a {
+footer .icons a {
   border: 1px solid;
   border-radius: 50%;
   padding: 10px;
@@ -169,7 +185,8 @@ footer section#icons a {
   text-decoration: none;
 }
 
-footer section#icons a:hover {
+footer .icons a:hover {
+  text-decoration: none;
   color: var(--Pink);
 }
 
@@ -180,15 +197,14 @@ footer p {
 }
 
 @media (min-width: 475px) {
-  main section#ready {
-    width: 420px;
+  main .ready {
     margin: 0 auto 30px;
-    height: 140px;
+    top: 130px;
   }
 }
 
 @media (min-width: 800px) {
-  header section,
+  header .content-sec,
   main section,
   footer {
     display: flex;
@@ -197,12 +213,17 @@ footer p {
     flex-wrap: wrap;
   }
 
-  header section div {
+  header .content-sec {
+    position: relative;
+    top: 50px;
+  }
+
+  header .content-sec div {
     width: 45%;
     text-align: left;
   }
 
-  header section img {
+  header .content-sec img {
     width: 45%;
   }
 
@@ -210,7 +231,7 @@ footer p {
     padding: 40px;
   }
 
-  main section div.content {
+  main section .content {
     width: 45%;
   }
 
@@ -223,12 +244,12 @@ footer p {
     order: 2;
   }
 
-  main section:nth-of-type(1) div.content,
-  main section:nth-of-type(3) div.content {
+  main section:nth-of-type(1) .content,
+  main section:nth-of-type(3) .content {
     order: 1;
   }
 
-  main section#ready {
+  main .ready {
     display: block;
   }
 
@@ -257,11 +278,18 @@ footer p {
     padding: 20px 50px;
   }
 
-  header section div {
+  header .content-sec div {
     width: 40%;
   }
 
-  header section img {
+  header .content-sec .content .btn {
+    font-size: 20px;
+    border-radius: 30px;
+    width: 270px;
+    height: 60px;
+  }
+
+  header .content-sec img {
     width: 40%;
   }
 
@@ -269,7 +297,7 @@ footer p {
     padding: 60px;
   }
 
-  main section.content {
+  main section .content {
     padding: 0 50px;
   }
 
