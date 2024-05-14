@@ -1,6 +1,6 @@
 # Huddle Landing Page with Alternating Feature Blocks
 
-This project is a landing page for Huddle and a challenge from [FrontEnd Mentor](https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100).
+This project is a landing page for Huddle and a challenge from [Frontend Mentor](https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100).
 
 ## Table of contents
 

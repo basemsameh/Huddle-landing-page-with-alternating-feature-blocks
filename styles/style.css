@@ -175,7 +175,7 @@ footer .icons {
   align-items: center;
 }
 
-footer .icons a {
+footer .icons i {
   border: 1px solid;
   border-radius: 50%;
   padding: 10px;
@@ -185,9 +185,9 @@ footer .icons a {
   text-decoration: none;
 }
 
-footer .icons a:hover {
-  text-decoration: none;
+footer .icons i:hover {
   color: var(--Pink);
+  cursor: pointer;
 }
 
 footer p {
